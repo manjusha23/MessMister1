@@ -21,13 +21,12 @@ public class LoginDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
+        //write your tables here - medha
+
         Log.e("helper", "onCreate called");
         db.execSQL("create table login(_id integer primary key autoincrement, " +
                 "name text, password text);");
-        //ContentValues user = new ContentValues();
-        //user.put("name", "Medha");
-        //user.put("password", "rocking");
-        //db.insert("login", null, user);
+
 
 
     }
