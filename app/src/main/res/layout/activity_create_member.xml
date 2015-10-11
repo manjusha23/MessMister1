@@ -1,0 +1,213 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/d_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.example.android.navigationview.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/t_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1565C0"
+            android:elevation="4dp"
+            android:theme="@style/GalaxyZooThemeToolbarDarkOverflow"
+            app:titleTextColor="#fff">
+        </android.support.v7.widget.Toolbar>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="4"
+            android:rowCount="7"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/basicinfo"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:textAllCaps="true"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_columnSpan="4"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/usernameWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="4"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="fill_horizontal"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:layout_margin="8dp"
+                    android:inputType="textPersonName"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="4"
+                android:layout_marginRight="16dp"
+                >
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:layout_margin="8dp"
+                    android:hint="phone"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/membershipinfo"
+                android:id="@+id/membershipinfo"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="16dp"
+                android:textAllCaps="true"
+                android:layout_columnSpan="4"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/primaryDark"
+                android:src="@drawable/ic_label_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate:"
+                android:id="@+id/rate"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnSpan="1" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:entries="@array/genderItems"
+                android:spinnerMode="dropdown"
+                android:layout_column="2"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill_horizontal"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/primaryDark"
+                android:src="@drawable/ic_label_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start of month:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnSpan="1" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:entries="@array/genderItems"
+                android:spinnerMode="dropdown"
+                android:layout_column="2"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill_horizontal"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/primaryDark"
+                android:src="@drawable/ic_label_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Groups:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_columnSpan="1" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:entries="@array/genderItems"
+                android:spinnerMode="dialog"
+                android:layout_column="2"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill_horizontal"/>
+
+
+
+
+        </GridLayout>
+
+
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
